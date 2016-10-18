@@ -1,5 +1,5 @@
-# Apollo
-Simple HTTP Server.
+# ApolloSocket 1
+Apollo HTTP Server 1, part of the Apollo Zeitreise training.
 
 Logs HTTP requests:
 ```
