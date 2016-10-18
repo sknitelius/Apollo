@@ -6,10 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>ApolloSocket</module>
-        <module>ApolloServletV1</module>
-        <module>ApolloServletV2</module>
-    <module>ApolloJaxRS</module>
+        <module>ApolloSocket1</module>
+        <module>ApolloSocket2</module>
+        <module>ApolloServlet1</module>
+        <module>ApolloServlet2</module>
+        <module>ApolloJaxRS</module>
   </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
