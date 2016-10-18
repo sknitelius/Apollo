@@ -1,8 +1,0 @@
-#surefire
-#Mon Oct 17 17:46:20 CEST 2016
-maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
-user.dir=C\:\\Users\\sknitelius\\projects\\Apollo\\ApolloSocket
-file.encoding=UTF-8
-localRepository=C\:\\Users\\sknitelius\\.m2\\repository
-basedir=C\:\\Users\\sknitelius\\projects\\Apollo\\ApolloSocket
-test=science.raketen.apollosocket.ApolloServerTest
