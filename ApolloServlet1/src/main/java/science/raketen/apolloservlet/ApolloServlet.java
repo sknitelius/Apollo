@@ -45,8 +45,6 @@ public class ApolloServlet extends HttpServlet {
             SESSIONS.put(sessionid, apolloSession);
         }
         
-        String queryString = req.getQueryString();
-        
         resp.setStatus(200);
         resp.setContentType("text/plain");
         PrintWriter writer = resp.getWriter();

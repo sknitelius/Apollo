@@ -50,7 +50,6 @@ public class ApolloServer {
                 throw new RuntimeException(ex);
             }
         }
-
     }
 
     private void logRequest(Socket socket) throws IOException {

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package science.raketen.apollojaxrs;
+package science.raketen.apollojaxrs.rest;
 
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
@@ -18,7 +18,7 @@ import javax.ws.rs.core.Response;
  */
 @Path("/hallo")
 @SessionScoped
-public class ApolloRSEndpoint implements Serializable {
+public class ApolloEndpoint implements Serializable {
     
     private int i;
     
