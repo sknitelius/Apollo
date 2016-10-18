@@ -15,11 +15,10 @@
  */
 package science.raketen.apollosocket;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.ServerSocket;
-import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,56 +28,32 @@ import java.util.logging.Logger;
  */
 public class ApolloServer {
 
-    private static final String HTTP_RESPONSE_HEADER = "HTTP/1.1 200 OK\r\n\r\n";
-
+    private final ExecutorService executorService;
     private final ServerSocket serverSocket;
     private boolean run = true;
 
     public ApolloServer(int port) throws IOException {
         this.serverSocket = new ServerSocket(port);
+        this.executorService = Executors.newFixedThreadPool(8);
     }
 
     public void start() {
         while (run) {
-            try (Socket socket = serverSocket.accept()) {
-                Request request = parseRequest(socket);
-                
-                String name = request.getQueryParam("name");
-                String httpResponse = String.format("%s Hallo %s!", HTTP_RESPONSE_HEADER, name);
-                
-                socket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
-                socket.close();
+            try {
+                executorService.execute(new RequestHandler(serverSocket.accept()));
             } catch (IOException ex) {
                 Logger.getLogger(ApolloServer.class.getName()).log(Level.SEVERE, null, ex);
-                throw new RuntimeException(ex);
             }
         }
 
-    }
-
-    private Request parseRequest(Socket socket) throws IOException {
-        InputStreamReader isr = new InputStreamReader(socket.getInputStream());
-        BufferedReader reader = new BufferedReader(isr);
-
-        String line = reader.readLine();
-        String[] http = line.split(" ");
-        return new Request((http[0]), (http[1]), (http[2]));
     }
 
     public void stop() {
         this.run = false;
     }
 
-    public int getPort() {
-        return serverSocket.getLocalPort();
-    }
-
     public static void main(String[] args) throws IOException {
-        int port = 8080;
-        if (args.length > 1) {
-            port = Integer.parseInt(args[0]);
-        }
-        ApolloServer apolloServer = new ApolloServer(port);
+        ApolloServer apolloServer = new ApolloServer(8080);
         apolloServer.start();
     }
 }

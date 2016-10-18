@@ -8,9 +8,10 @@
     <modules>
         <module>ApolloSocket1</module>
         <module>ApolloSocket2</module>
+        <module>ApolloSocket3</module>
         <module>ApolloServlet1</module>
         <module>ApolloServlet2</module>
-        <module>ApolloJaxRS</module>
+        <module>ApolloJaxRS1</module>
   </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

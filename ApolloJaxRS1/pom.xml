@@ -8,11 +8,11 @@
   </parent>
 
     <groupId>science.raketen</groupId>
-    <artifactId>ApolloJaxRS</artifactId>
+    <artifactId>ApolloJaxRS1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>ApolloJaxRS</name>
+    <name>ApolloJaxRS1</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
