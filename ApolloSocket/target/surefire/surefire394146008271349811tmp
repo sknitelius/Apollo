@@ -1,0 +1,22 @@
+#surefire
+#Mon Oct 17 17:43:32 CEST 2016
+testClassesDirectory=C\:\\Users\\sknitelius\\projects\\Apollo\\ApolloSocket\\target\\test-classes
+forkMode=once
+classPathUrl.3=C\:\\Users\\sknitelius\\.m2\\repository\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar
+classPathUrl.2=C\:\\Users\\sknitelius\\.m2\\repository\\junit\\junit\\4.12\\junit-4.12.jar
+useManifestOnlyJar=true
+classPathUrl.1=C\:\\Users\\sknitelius\\projects\\Apollo\\ApolloSocket\\target\\classes
+classPathUrl.0=C\:\\Users\\sknitelius\\projects\\Apollo\\ApolloSocket\\target\\test-classes
+reportsDirectory=C\:\\Users\\sknitelius\\projects\\Apollo\\ApolloSocket\\target\\surefire-reports
+providerConfiguration=org.apache.maven.surefire.junit4.JUnit4Provider
+testSuiteDefinitionTestSourceDirectory=C\:\\Users\\sknitelius\\projects\\Apollo\\ApolloSocket\\src\\test\\java
+requestedTest=science.raketen.apollosocket.ApolloServerTest
+surefireClassPathUrl.1=C\:\\Users\\sknitelius\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.10\\surefire-api-2.10.jar
+surefireClassPathUrl.0=C\:\\Users\\sknitelius\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit4\\2.10\\surefire-junit4-2.10.jar
+runOrder=filesystem
+useSystemClassLoader=true
+isTrimStackTrace=true
+enableAssertions=true
+failIfNoTests=true
+includes0=**/science/raketen/apollosocket/ApolloServerTest.java
+childDelegation=false

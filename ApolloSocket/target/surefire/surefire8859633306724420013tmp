@@ -1,0 +1,12 @@
+#surefire
+#Mon Oct 17 17:47:01 CEST 2016
+jpda.address=58728
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
+file.encoding=UTF-8
+jpda.listen=true
+forkMode=once
+user.dir=C\:\\Users\\sknitelius\\projects\\Apollo\\ApolloSocket
+localRepository=C\:\\Users\\sknitelius\\.m2\\repository
+test=science.raketen.apollosocket.ApolloServerTest
+basedir=C\:\\Users\\sknitelius\\projects\\Apollo\\ApolloSocket
+maven.surefire.debug=-Xdebug -Xrunjdwp\:transport\=dt_socket,server\=n,address\=58728
